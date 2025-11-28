@@ -1,14 +1,15 @@
 name: "My ESPHome"
 slug: "my_esphome"
-description: "User-controlled ESPHome version. Allows downgrading to 2025.10.5 or any other version."
+description: "Custom pinned ESPHome version"
 version: "2025.10.5"
 url: "https://github.com/shuricksumy/my-esphome-addon"
 
 startup: services
 boot: auto
+
 ingress: true
-panel_icon: mdi:chip
 panel_title: "My ESPHome"
+panel_icon: mdi:chip
 
 arch:
   - amd64
@@ -16,9 +17,10 @@ arch:
   - armv7
   - armhf
 
-image: "ghcr.io/esphome/esphome:2025.10.5"
+# Must use official hassio image, but pinned
+image: ghcr.io/esphome/esphome-hassio:2025.10.5
 
 ports:
-  6052/tcp: 6052
+  6052/tcp: null
 
 init: false
