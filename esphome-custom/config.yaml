@@ -1,7 +1,7 @@
 name: "My ESPHome"
 slug: "my_esphome"
 description: "User-controlled ESPHome version with manual version selection."
-version: "2025.10.5"
+version: !env_var esphome_version
 url: "https://github.com/shuricksumy/my-esphome-addon"
 startup: services
 boot: auto
@@ -12,11 +12,15 @@ arch:
   - armv7
   - armhf
 
+options:
+  esphome_version: "2025.10.5"
+
+schema:
+  esphome_version: str
+
 image: "ghcr.io/esphome/esphome"
 
 ports:
   6052/tcp: 6052
 
-options: {}
-schema: {}
 init: false
