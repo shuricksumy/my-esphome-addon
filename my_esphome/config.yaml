@@ -3,9 +3,9 @@ slug: "my_esphome"
 description: "User-controlled ESPHome version. Allows downgrading to 2025.10.5 or any other version."
 version: "2025.10.5"
 url: "https://github.com/shuricksumy/my-esphome-addon"
+
 startup: services
 boot: auto
-
 ingress: true
 panel_icon: mdi:chip
 panel_title: "My ESPHome"
@@ -16,17 +16,9 @@ arch:
   - armv7
   - armhf
 
-# FIXED: No variable expansion!
 image: "ghcr.io/esphome/esphome:2025.10.5"
 
 ports:
   6052/tcp: 6052
-
-# These are allowed:
-options:
-  esphome_version: "2025.10.5"
-
-schema:
-  esphome_version: str
 
 init: false
