@@ -16,11 +16,13 @@ arch:
   - armv7
   - armhf
 
-image: "ghcr.io/esphome/esphome:${esphome_version}"
+# FIXED: No variable expansion!
+image: "ghcr.io/esphome/esphome:2025.10.5"
 
 ports:
   6052/tcp: 6052
 
+# These are allowed:
 options:
   esphome_version: "2025.10.5"
 
