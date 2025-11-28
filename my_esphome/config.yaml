@@ -6,13 +6,17 @@ url: "https://github.com/shuricksumy/my-esphome-addon"
 startup: services
 boot: auto
 
+ingress: true
+panel_icon: mdi:chip
+panel_title: "My ESPHome"
+
 arch:
   - amd64
   - aarch64
   - armv7
   - armhf
 
-image: "ghcr.io/esphome/esphome"
+image: "ghcr.io/esphome/esphome:${esphome_version}"
 
 ports:
   6052/tcp: 6052
