@@ -1,7 +1,7 @@
 name: "My ESPHome"
 slug: "my_esphome"
-description: "User-controlled ESPHome version with manual version selection."
-version: !env_var esphome_version
+description: "User-controlled ESPHome version. Allows downgrading to 2025.10.5 or any other version."
+version: "2025.10.5"
 url: "https://github.com/shuricksumy/my-esphome-addon"
 startup: services
 boot: auto
@@ -12,15 +12,18 @@ arch:
   - armv7
   - armhf
 
+image: "ghcr.io/esphome/esphome"
+
+ports:
+  6052/tcp: 6052
+
 options:
   esphome_version: "2025.10.5"
 
 schema:
   esphome_version: str
 
-image: "ghcr.io/esphome/esphome"
-
-ports:
-  6052/tcp: 6052
+environment:
+  - ESPHOME_DOCKER_TAG=${esphome_version}
 
 init: false

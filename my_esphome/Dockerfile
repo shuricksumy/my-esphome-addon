@@ -1,0 +1,2 @@
+ARG BUILD_FROM=ghcr.io/esphome/esphome
+FROM ${BUILD_FROM}:${ESPHOME_DOCKER_TAG}
