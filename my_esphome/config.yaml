@@ -23,7 +23,4 @@ options:
 schema:
   esphome_version: str
 
-environment:
-  - ESPHOME_DOCKER_TAG=${esphome_version}
-
 init: false
