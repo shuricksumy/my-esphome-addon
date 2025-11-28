@@ -1,6 +1,5 @@
 {
   "name": "My ESPHome Add-on Repository",
-  "slug": "my_esphome_repo",
   "url": "https://github.com/shuricksumy/my-esphome-addon",
   "maintainer": "shuricksumy"
 }
